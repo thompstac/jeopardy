@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title-bar {
+  margin: 20px 0;
+}
+
+.title-bar img {
+  width: 50%; /* Adjust the width as needed */
+  max-width: 1100px; /* Optional: Set a maximum width */
+}
+
+#jeopardy-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 1200px; /* Adjust the max-width to make columns wider */
+  margin: 0 auto;
+}
+
+.jeopardy-cell {
+  color: white;
+  padding: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-cell {
+  cursor: default;
+  font-size: 24px;
+  background-color: #5A718C; /* Category row color */
+}
+
+.jeopardy-cell:hover {
+  opacity: 0.8;
+}
+
+.answered {
+  background-color: #555; /* Change to a grey color to indicate answered */
+  color: #ccc; /* Change text color to indicate answered */
+}
+
+.column-1 {
+  background-color: #f24c3e;
+}
+
+.column-2 {
+  background-color: #fc6e4a;
+}
+
+.column-3 {
+  background-color: #ffbba8;
+}
+
+.column-4 {
+  background-color: #bbcad1;
+}
+
+.column-5 {
+  background-color: #8ca4be;
+}
+
+#question-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 10px;
+}
+
+#close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.answer {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #5A718C;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
